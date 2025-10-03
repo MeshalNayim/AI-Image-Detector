@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI vs Human Image Detector</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>AI vs Human Image Detector</h1>
+        <p>Upload an image to see if it was AI-generated or human-created.</p>
+        
+        <input type="file" id="imageInput" accept="image/*">
+        
+        <div class="image-preview" id="imagePreview">
+            <span class="preview-text">Image Preview</span>
+        </div>
+
+        <button id="predictBtn">Analyze Image</button>
+
+        <div class="result-box" id="resultBox">
+            <p><strong>Prediction:</strong> <span id="predictionResult">...</span></p>
+            <p><strong>Confidence:</strong> <span id="confidenceResult">...</span></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
