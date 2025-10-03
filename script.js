@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const confidenceResult = document.getElementById('confidenceResult');
     
     // IMPORTANT: Replace with your actual API Gateway URL from AWS
-    const API_ENDPOINT = 'https://xf7m02ijaj.execute-api.us-east-2.amazonaws.com/default/Aidetector';
+    const API_ENDPOINT = 'https://xf7m02ijaj.execute-api.us-east-2.amazonaws.com/default';
 
     // Preview the selected image
     imageInput.addEventListener('change', function(event) {
@@ -50,4 +50,5 @@ document.addEventListener('DOMContentLoaded', function() {
             alert('Failed to connect to the API.');
         });
     });
+
 });
