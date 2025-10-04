@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const confidenceResult = document.getElementById('confidenceResult');
 
     // IMPORTANT: Replace with your actual Elastic Beanstalk CNAME
-    const API_ENDPOINT = 'https://d23m47uggfn3kw.cloudfront.net/predict';
+    const API_ENDPOINT = 'https://d23m47uggfn3kw.cloudfront.net';
 
     // Preview the selected image
     imageInput.addEventListener('change', function(event) {
@@ -51,6 +51,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
 
 
 
