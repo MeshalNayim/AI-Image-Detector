@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const confidenceResult = document.getElementById('confidenceResult');
     
     // IMPORTANT: Replace with your actual API Gateway URL from AWS
-    const API_ENDPOINT = 'https://kjtmvhmafg.execute-api.us-east-2.amazonaws.com/PROD';
+    const API_ENDPOINT = 'https://xw7ot11tw6.execute-api.us-east-2.amazonaws.com/default/Aidetector';
 
     // Preview the selected image
     imageInput.addEventListener('change', function(event) {
@@ -52,6 +52,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
 });
+
 
 
 
