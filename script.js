@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const predictBtn = document.getElementById('predictBtn');
     const predictionResult = document.getElementById('predictionResult');
     const confidenceResult = document.getElementById('confidenceResult');
-    
+
     // IMPORTANT: Replace with your actual Elastic Beanstalk CNAME
     const API_ENDPOINT = 'https://d23m47uggfn3kw.cloudfront.net';
 
