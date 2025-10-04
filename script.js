@@ -4,8 +4,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const predictBtn = document.getElementById('predictBtn');
     const predictionResult = document.getElementById('predictionResult');
     const confidenceResult = document.getElementById('confidenceResult');
-    
-    // IMPORTANT: Replace with your actual Elastic Beanstalk CNAME
+    const status = document.getElementById('status');
+
     const API_ENDPOINT = 'https://d23m47uggfn3kw.cloudfront.net';
 
     // Preview the selected image
@@ -31,13 +31,17 @@ document.addEventListener('DOMContentLoaded', function() {
         const formData = new FormData();
         formData.append('file', file);
 
-        // Fetch API to send the image to your Elastic Beanstalk backend
+        status.textContent = "Checking image...";
+        predictionResult.textContent = "-";
+        confidenceResult.textContent = "-";
+
         fetch(API_ENDPOINT, {
             method: 'POST',
             body: formData
         })
         .then(response => response.json())
         .then(data => {
+            status.textContent = "";
             if (data.error) {
                 alert('Error: ' + data.error);
                 return;
@@ -47,13 +51,8 @@ document.addEventListener('DOMContentLoaded', function() {
         })
         .catch(error => {
             console.error('Error:', error);
+            status.textContent = "";
             alert('Failed to connect to the API. Make sure your Elastic Beanstalk environment is running and allows CORS from this domain.');
         });
     });
 });
-
-
-
-
-
-
