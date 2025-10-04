@@ -5,8 +5,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const predictionResult = document.getElementById('predictionResult');
     const confidenceResult = document.getElementById('confidenceResult');
     
-    // IMPORTANT: Replace with your actual API Gateway URL from AWS
-    const API_ENDPOINT = 'https://xw7ot11tw6.execute-api.us-east-2.amazonaws.com/default/Aidetector';
+    // IMPORTANT: Replace with your actual Elastic Beanstalk CNAME
+    const API_ENDPOINT = 'https://Aidetector-env.eba-ugfn7pg2.us-west-2.elasticbeanstalk.com/predict';
 
     // Preview the selected image
     imageInput.addEventListener('change', function(event) {
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const formData = new FormData();
         formData.append('file', file);
 
-        // Fetch API to send the image to your backend
+        // Fetch API to send the image to your Elastic Beanstalk backend
         fetch(API_ENDPOINT, {
             method: 'POST',
             body: formData
@@ -47,12 +47,7 @@ document.addEventListener('DOMContentLoaded', function() {
         })
         .catch(error => {
             console.error('Error:', error);
-            alert('Failed to connect to the API.');
+            alert('Failed to connect to the API. Make sure your Elastic Beanstalk environment is running and allows CORS from this domain.');
         });
     });
-
 });
-
-
-
-
