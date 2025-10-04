@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const API_ENDPOINT = 'https://d23m47uggfn3kw.cloudfront.net';
 
-    // Preview the selected image
     imageInput.addEventListener('change', function(event) {
         const file = event.target.files[0];
         if (file) {
@@ -20,7 +19,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Handle prediction when button is clicked
     predictBtn.addEventListener('click', function() {
         const file = imageInput.files[0];
         if (!file) {
