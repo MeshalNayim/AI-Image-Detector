@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const confidenceResult = document.getElementById('confidenceResult');
     
     // IMPORTANT: Replace with your actual Elastic Beanstalk CNAME
-    const API_ENDPOINT = 'https://d3ow5wbcdx1jw4.cloudfront.net/predict';
+    const API_ENDPOINT = 'https://aidetector-env.eba-ugfn7pg2.us-west-2.elasticbeanstalk.com/predict';
 
     // Preview the selected image
     imageInput.addEventListener('change', function(event) {
