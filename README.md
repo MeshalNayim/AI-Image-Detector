@@ -15,10 +15,12 @@ The front end is a simple static website hosted on GitHub Pages, built with HTML
 * **CSS:** For styling and layout.
 * **JavaScript:** To handle user interactions, image previews, and communication with the backend API.
 
-### Backend
-* **AWS API Gateway:** Manages API endpoints and handles CORS for secure cross-origin requests.
-* **AWS ECR:** Stores the Docker image containing the AI model.
-* **AWS Lambda or AWS EC2:** Runs the containerized AI model to process image predictions.
+
+
+* **AWS API Gateway:** Manages API endpoints and handles CORS to enable secure cross-origin requests.  
+* **AWS ECR:** Stores the Docker image containing the AI model.  
+* **AWS Elastic Beanstalk:** Deploys and runs the containerized AI model for processing image predictions.  
+
 
 ## How to Use
 
